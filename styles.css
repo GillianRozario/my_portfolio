@@ -180,8 +180,9 @@ h1, h2, h3, h4 {
     right: 0;
     height: var(--header-height);
     background-color: var(--bg-header);
-    backdrop-filter: blur(8px);
+    
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: background-color var(--transition-fast);
@@ -428,12 +429,38 @@ h1, h2, h3, h4 {
     transform: translateY(-3px);
 }
 
+.project-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
 .project-period {
     display: block;
     font-size: 0.8rem;
     color: var(--text-muted);
     font-weight: 500;
-    margin-bottom: 0.4rem;
+}
+
+.project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0.25rem 0.55rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    transition: all var(--transition-fast);
+}
+
+.project-github-link:hover {
+    color: var(--text-primary);
+    border-color: var(--border-dark);
+    background-color: var(--bg-secondary);
 }
 
 .project-title {
